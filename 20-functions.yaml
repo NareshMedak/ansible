@@ -1,0 +1,14 @@
+- name: functions
+  hosts: local
+  connections: local
+  vars:
+    persons: "Ramesh, Suresh, Raheem, joseph"
+  tasks:
+    - name: check the undefined variable
+      ansible.builtin.debug:
+        msg: "Hello, {{ person | default('Ramesh' ) }}"
+
+    - name: print names
+      ansible.builtin,debug:
+        msg: "Hello {{ persons }}"
+        
