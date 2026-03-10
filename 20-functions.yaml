@@ -1,6 +1,6 @@
 - name: functions
   hosts: local
-  connections: local
+  connection: local
   vars:
     persons: "Ramesh, Suresh, Raheem, joseph"
   tasks:
@@ -11,4 +11,3 @@
     - name: print names
       ansible.builtin,debug:
         msg: "Hello {{ persons }}"
-        
