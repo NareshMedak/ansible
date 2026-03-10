@@ -42,8 +42,8 @@
      ansible.builtin.debug:
       msg: "Hello {{ name | lower }}"
   
-  - name: check IP address is vaild or not 
-    vars: 
-      ip: "106.192.12.246"
+  - name: check IP address is valid or not
+    vars:
+      ip: "192.168.1.1"
     ansible.builtin.debug:
-      msg: "{{ ip | ansible.utils.ipadrr }}"
+      msg: "{{ ip | ansible.utils.ipaddr }}"
